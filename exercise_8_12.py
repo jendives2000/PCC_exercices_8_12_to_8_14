@@ -12,6 +12,8 @@ from icecream import ic
 
 # -----------------------------------------------------------------------------
 
+print("\n\nExercises 8-12:\n-------------------------------------------------\n")
+
 
 # extra code: a func to increment a number to use when printing order number
 def inc_order_num(order_number):
@@ -21,18 +23,16 @@ def inc_order_num(order_number):
     return num
 
 
-# 1a.  Write a function that accepts a list of items a person wants on a sandwich.
-def ordering_sandw(*wanted_items, order_number):
-    # 1a.1. The function should have one parameter that collects as many items as the function call provides,
-    # 1a.2. and it should print a summary of the sandwich that’s being ordered.
+def ordering_sandw(*wanted_items, order_number):  # 1a. & 1a.1.
+    # using the 1st funct above
     inc_num = inc_order_num(order_number)
     summary_sandw = ", ".join(item.title() for item in wanted_items)
-    print(
+    print(  # 1a.2.
         f"\nOrder #{inc_num}: Your sandwich is being prepared with:\n\t{summary_sandw}"
     )
 
 
-# 1a.3. Call the function three times, using a different number of arguments each time.
+# 1a.3.
 processing_sandw_1 = ordering_sandw(
     "ketchup", "lettuce", "tomatoes", "onions", order_number=0
 )

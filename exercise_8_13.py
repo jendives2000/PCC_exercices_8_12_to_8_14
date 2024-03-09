@@ -14,7 +14,6 @@ from icecream import ic
 print("\n\nExercises 8-13:\n-------------------------------------------------\n")
 
 
-# 2a. Build a profile of yourself by calling build_profile(), using:
 def build_profile(first, last, **user_info):
     """Build a dictionary containing everything we know about a user."""
     user_info["first name"] = first
@@ -22,12 +21,10 @@ def build_profile(first, last, **user_info):
     return user_info
 
 
-# 2a.1. your first and last names
-# 2a.2. and three other key-value pairs that describe you.
-build_profile_1 = build_profile(
-    "Jean-Yves",
+build_profile_1 = build_profile(  # 2a.
+    "Jean-Yves",  # 2a.1.
     "TRAN",
-    job="Creative Python Developer",
+    job="Creative Python Developer",  # 2a.2.
     status="married",
     education="Master Degree",
 )
