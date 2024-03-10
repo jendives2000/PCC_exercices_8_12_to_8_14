@@ -48,12 +48,9 @@ It **wasn't requested to add an order number, but I did it**. For that I just de
 
 ![alt text](image-1.png)
 
-And I used it in the function `ordering_sandw` on line 28. **Both functions have a common parameter: `order_number`**. It took me about an hour to find it on my own, so I'm a little proud of that.   
+And as I reviewed my code over and over again, I discovered that this extra function was not necessary at all. I could just pass the order number as an argument that''l be printed and that's it. 
 
-I was a little **too ambitious** in the first place, because I wanted it to increment that number directly in the same single function, **I didn't think to make it 2 separate functions**.  
-The book do recommend to keep each function as a one-tasker, making it exclusively do a single thing. And **ultimately that is what I did** and as a consequence the code is a lot less complicated (or less 'stained' with comments) and also less obscure. 
-
-But I also **could not achieve one thing**: to make the function increment the number without me incrementing it myself by just calling it in the function call (that common parameter that both functions have: `order_number`).   
+And also, that is the problem, I did not find a way for it to increment the number without me incrementing it myself by passing the number as an arg. So I decided to remove it (commit 'Removed unnecessary function')
 That'll be something to keep my eye on. 
 
 Here's the print out:  
@@ -75,7 +72,7 @@ Here's the print out:
 
 After I compared my code to the solutions: 
 - **exercise 8-12**:  
-  The **solution code is more mature**, if you remove my incremented order number function part. Because then it is actually just a printing-arguments function, which respects the instructions of the exercise.  
+  The **solution code is more mature**. Because my function is actually just a printing-arguments function, which still respects the instructions of the exercise.  
   The **`for loop` used in the solutions and the use of the prints are also better**, the output looks better. So I'll definitely reuse these tricks.  
 
   GRADE: I'd say pass but without style. 
